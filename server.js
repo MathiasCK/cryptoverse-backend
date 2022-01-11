@@ -12,6 +12,10 @@ const PORT = process.env.port || 8000;
 
 //app.use(express.static(path.join(__dirname, 'client/build')));
 
+app.get('/', (_, res) => {
+  res.json({ message: 'Hello world' });
+});
+
 app.get('/api/news/search', fetchNewsData);
 
 app.get('/api/coins', fetchCryptoInfo);
