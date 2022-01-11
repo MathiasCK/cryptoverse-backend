@@ -1,5 +1,4 @@
 const express = require('express');
-const path = require('path');
 const {
   fetchCryptoInfo,
   fetchExchangesData,
@@ -8,9 +7,7 @@ const fetchNewsData = require('./controllers/cryptoNewsApi-controller');
 
 const app = express();
 
-const PORT = process.env.port || 8000;
-
-//app.use(express.static(path.join(__dirname, 'client/build')));
+const PORT = process.env.PORT || 8000;
 
 app.get('/', (_, res) => {
   res.json({ message: 'Hello world' });
