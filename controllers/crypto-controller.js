@@ -22,7 +22,10 @@ const fetchCryptoInfo = async (req, res) => {
     };
 
     const data = await (await axios(options)).data;
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.setHeader(
+      'Access-Control-Allow-Origin',
+      'https://cryptoverse-frontend-9hdz0mq34-mathiasck.vercel.app/',
+    );
     res.json(data);
   } catch (error) {
     sendErrorMessage(error, res);
@@ -38,7 +41,10 @@ const fetchExchangesData = async (req, res) => {
     };
 
     const data = await (await axios(options)).data;
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.setHeader(
+      'Access-Control-Allow-Origin',
+      'https://cryptoverse-frontend-9hdz0mq34-mathiasck.vercel.app/',
+    );
     res.json(data);
   } catch (error) {
     sendErrorMessage(error, res);
