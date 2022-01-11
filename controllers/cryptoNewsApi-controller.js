@@ -20,10 +20,7 @@ const fetchNewsData = async (req, res) => {
     };
 
     const data = await (await axios(options)).data;
-    res.setHeader(
-      'Access-Control-Allow-Origin',
-      'https://cryptoverse-frontend-9hdz0mq34-mathiasck.vercel.app/',
-    );
+    res.setHeader('Access-Control-Allow-Origin', '*');
     res.json(data);
   } catch (error) {
     res.status(500).json({ message: error.message });
